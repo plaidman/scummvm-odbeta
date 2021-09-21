@@ -13,7 +13,7 @@
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.	See the
 # GNU General Public License for more details.
 #
 # You should have received a copy of the GNU General Public License
@@ -582,8 +582,8 @@ option_help() {
 		tmpopt_prefix="--"
 	fi
 	tmpopt=`echo $1 | sed 's/_/-/g'`
-	option=`echo "${tmpopt_prefix}${tmpopt}                       " | sed "s/\(.\{23\}\).*/\1/"`
-	echo "  ${option}  ${2}"
+	option=`echo "${tmpopt_prefix}${tmpopt}			      " | sed "s/\(.\{23\}\).*/\1/"`
+	echo "	${option}  ${2}"
 }
 
 # Show an error about an unknown option
@@ -782,16 +782,16 @@ for parm in "$@" ; do
 Usage: $0 [OPTIONS]...
 
 Configuration:
-  -h, --help              display this help and exit
-  --backend=BACKEND       backend to build (3ds, android, dc, dingux, ds, gcw0,
-                          gph, iphone, ios7, ios7-arm64, maemo, n64, null, openpandora,
-                          psp, psp2, samsungtv, sdl, switch, wii) [sdl]
+  -h, --help		  display this help and exit
+  --backend=BACKEND	  backend to build (3ds, android, dc, dingux, ds, gcw0,
+			  gph, iphone, ios7, ios7-arm64, maemo, n64, null, opendingux,
+			  openpandora, psp, psp2, samsungtv, sdl, switch, wii) [sdl]
 
 Installation directories:
-  --prefix=PREFIX         install architecture-independent files in PREFIX
-                          [/usr/local]
+  --prefix=PREFIX	  install architecture-independent files in PREFIX
+			  [/usr/local]
   --exec-prefix=EPREFIX   install architecture-dependent files in EPREFIX
-                          [PREFIX]
+			  [PREFIX]
 
 By default, \`make install' will install all the files in
 \`/usr/local/bin', \`/usr/local/lib' etc.  You can specify
@@ -801,53 +801,54 @@ for instance \`--prefix=\$HOME'.
 For better control, use the options below.
 
 Fine tuning of the installation directories:
-  --bindir=DIR            user executables [EPREFIX/bin]
-  --libdir=DIR            object code libraries [EPREFIX/lib]
-  --datarootdir=DIR       read-only arch.-independent data root [PREFIX/share]
-  --datadir=DIR           read-only architecture-independent data
-                          [DATAROOTDIR/scummvm]
-  --mandir=DIR            man documentation [DATAROOTDIR/man]
-  --docdir=DIR            documentation root [DATAROOTDIR/doc/scummvm]
+  --bindir=DIR		  user executables [EPREFIX/bin]
+  --libdir=DIR		  object code libraries [EPREFIX/lib]
+  --datarootdir=DIR	  read-only arch.-independent data root [PREFIX/share]
+  --datadir=DIR		  read-only architecture-independent data
+			  [DATAROOTDIR/scummvm]
+  --mandir=DIR		  man documentation [DATAROOTDIR/man]
+  --docdir=DIR		  documentation root [DATAROOTDIR/doc/scummvm]
 
 Special configuration feature:
-  --host=HOST             cross-compile to target HOST (arm-linux, ...)
-                          special targets: 3ds for Nintendo 3DS
-                                           android-arm-v7a for Android ARMv7-A (armeabi-v7a)
-                                           android-arm64-v8a for Android ARMv8-A (arm64-v8a)
-                                           android-x86 for Android x86
-                                           android-x86_64 for Android x86_64
-                                           androidsdl for Android with SDL backend
-                                           caanoo for Caanoo
-                                           dingux for Dingux
-                                           raspberrypi for Raspberry Pi
-                                           dreamcast for Sega Dreamcast
-                                           ds for Nintendo DS
-                                           gamecube for Nintendo GameCube
-                                           gcw0 for GCW Zero
-                                           gp2x for GP2X
-                                           gp2xwiz for GP2X Wiz
-                                           iphone for Apple iPhone (iOS <= 6)
-                                           ios7 for Apple iPhone / iPad (iOS >= 7)
-                                           ios7-arm64 for Apple iPhone / iPad (iOS >= 7, 64-bit)
-                                           maemo for Nokia Maemo
-                                           n64 for Nintendo 64
-                                           openpandora for OpenPandora
-                                           ouya for OUYA
-                                           ps3 for PlayStation 3
-                                           psp2 for PlayStation Vita
-                                           psp for PlayStation Portable
-                                           samsungtv for Samsung TV
-                                           switch for Nintendo Switch
-                                           wii for Nintendo Wii
+  --host=HOST		  cross-compile to target HOST (arm-linux, ...)
+			  special targets: 3ds for Nintendo 3DS
+					   android-arm-v7a for Android ARMv7-A (armeabi-v7a)
+					   android-arm64-v8a for Android ARMv8-A (arm64-v8a)
+					   android-x86 for Android x86
+					   android-x86_64 for Android x86_64
+					   androidsdl for Android with SDL backend
+					   caanoo for Caanoo
+					   dingux for Dingux
+					   raspberrypi for Raspberry Pi
+					   dreamcast for Sega Dreamcast
+					   ds for Nintendo DS
+					   gamecube for Nintendo GameCube
+					   gcw0 for GCW Zero
+					   gp2x for GP2X
+					   gp2xwiz for GP2X Wiz
+					   iphone for Apple iPhone (iOS <= 6)
+					   ios7 for Apple iPhone / iPad (iOS >= 7)
+					   ios7-arm64 for Apple iPhone / iPad (iOS >= 7, 64-bit)
+					   maemo for Nokia Maemo
+					   n64 for Nintendo 64
+					   opendingux for Opendingux Beta
+					   openpandora for OpenPandora
+					   ouya for OUYA
+					   ps3 for PlayStation 3
+					   psp2 for PlayStation Vita
+					   psp for PlayStation Portable
+					   samsungtv for Samsung TV
+					   switch for Nintendo Switch
+					   wii for Nintendo Wii
 
 Game engines:
-  --enable-all-engines     enable all engines, including those which are
-                           broken or unsupported
+  --enable-all-engines	   enable all engines, including those which are
+			   broken or unsupported
   --disable-all-engines    disable all engines
   --enable-all-unstable-engines     enable the engines which are
-                                    broken or unsupported
+				    broken or unsupported
   --disable-all-unstable-engines    disable only the engines which are
-                                    broken or unsupported
+				    broken or unsupported
   --enable-engine=<engine name>[,<engine name>...] enable engine(s) listed
   --disable-engine=<engine name>[,<engine name>...] disable engine(s) listed
   --enable-engine-static=<engine name>[,<engine name>...]
@@ -857,56 +858,56 @@ Game engines:
     The values of <engine name> for these options are as follows:
 $engines_help
 Optional Features:
-  --enable-static          build a static binary instead of using shared objects
+  --enable-static	   build a static binary instead of using shared objects
   --enable-detection-static  build detection features into executable (default)
   --enable-detection-dynamic build detection features into a library
-  --enable-c++11           build as C++11 if the compiler allows that
-  --disable-debug          disable building with debugging symbols
-  --enable-Werror          treat warnings as errors
-  --enable-release         enable building in release mode (this activates
-                           optimizations)
+  --enable-c++11	   build as C++11 if the compiler allows that
+  --disable-debug	   disable building with debugging symbols
+  --enable-Werror	   treat warnings as errors
+  --enable-release	   enable building in release mode (this activates
+			   optimizations)
   --enable-release-mode    enable building in release mode (without optimizations)
   --enable-optimizations   enable optimizations
-  --enable-asan            enable Address Sanitizer for memory-related debugging
-  --enable-tsan            enable Thread Sanitizer for thread-related debugging
-  --enable-profiling       enable profiling
-  --enable-plugins         enable the support for dynamic plugins
-  --default-dynamic        make plugins dynamic by default
-  --disable-mt32emu        don't enable the integrated MT-32 emulator
-  --disable-lua            don't enable Lua support
-  --disable-nuked-opl      don't build Nuked OPL driver
-  --disable-16bit          don't enable 16bit color support
-  --disable-highres        don't enable support for high resolution engines >320x240
+  --enable-asan		   enable Address Sanitizer for memory-related debugging
+  --enable-tsan		   enable Thread Sanitizer for thread-related debugging
+  --enable-profiling	   enable profiling
+  --enable-plugins	   enable the support for dynamic plugins
+  --default-dynamic	   make plugins dynamic by default
+  --disable-mt32emu	   don't enable the integrated MT-32 emulator
+  --disable-lua		   don't enable Lua support
+  --disable-nuked-opl	   don't build Nuked OPL driver
+  --disable-16bit	   don't enable 16bit color support
+  --disable-highres	   don't enable support for high resolution engines >320x240
   --disable-savegame-timestamp don't use timestamps for blank savegame descriptions
-  --disable-scalers        exclude scalers
-  --disable-hq-scalers     exclude HQ2x and HQ3x scalers (disables Edge scalers as well)
+  --disable-scalers	   exclude scalers
+  --disable-hq-scalers	   exclude HQ2x and HQ3x scalers (disables Edge scalers as well)
   --disable-edge-scalers   exclude Edge2x and Edge3x scalers
-  --disable-aspect         exclude aspect ratio correction
+  --disable-aspect	   exclude aspect ratio correction
   --disable-translation    don't build support for translated messages
-  --disable-taskbar        don't build support for taskbar and launcher integration
-  --disable-cloud          don't build cloud support
+  --disable-taskbar	   don't build support for taskbar and launcher integration
+  --disable-cloud	   don't build cloud support
   --disable-system-dialogs don't build support for system dialogs
-  --enable-vkeybd          build virtual keyboard support
+  --enable-vkeybd	   build virtual keyboard support
   --enable-eventrecorder   enable event recording functionality
   --disable-eventrecorder  disable event recording functionality
-  --enable-updates         build support for updates
+  --enable-updates	   build support for updates
   --enable-text-console    use text console instead of graphical console
   --enable-verbose-build   enable regular echoing of commands during build
-                           process
-  --enable-tts             build support for text to speech
-  --disable-tts            don't build support for text to speech
-  --disable-bink           don't build with Bink video support
-  --opengl-mode=MODE       OpenGL (ES) mode to use for OpenGL output [auto]
-                           available modes: auto for autodetection
-                                            none for disabling any OpenGL usage
-                                            any for runtime detection
-                                            gl for forcing OpenGL
-                                            gles for forcing OpenGL ES
-                                            gles2 for forcing OpenGL ES 2
-                           WARNING: only specify this manually if you know what
-                           you are doing!
+			   process
+  --enable-tts		   build support for text to speech
+  --disable-tts		   don't build support for text to speech
+  --disable-bink	   don't build with Bink video support
+  --opengl-mode=MODE	   OpenGL (ES) mode to use for OpenGL output [auto]
+			   available modes: auto for autodetection
+					    none for disabling any OpenGL usage
+					    any for runtime detection
+					    gl for forcing OpenGL
+					    gles for forcing OpenGL ES
+					    gles2 for forcing OpenGL ES 2
+			   WARNING: only specify this manually if you know what
+			   you are doing!
   --no-builtin-resources   do not include additional resources (e.g. engine data, fonts)
-                           into the ScummVM binary
+			   into the ScummVM binary
   --enable-windows-console  show console output on Windows (default)
   --disable-windows-console do not show console output on Windows
   --enable-windows-unicode  use Windows Unicode APIs (default)
@@ -914,135 +915,135 @@ Optional Features:
 
 Optional Documentation Options:
   --with-manual-version=VERSION version to use when generating the manual (optional)
-  --with-pandoc-format=FORMAT   pandoc format to use during the conversion (optional)
+  --with-pandoc-format=FORMAT	pandoc format to use during the conversion (optional)
 
 Optional Libraries:
   --with-alsa-prefix=DIR   prefix where alsa is installed (optional)
-  --disable-alsa           disable ALSA midi sound support [autodetect]
+  --disable-alsa	   disable ALSA midi sound support [autodetect]
 
   --with-ogg-prefix=DIR    prefix where libogg is installed (optional)
-  --disable-ogg            disable Ogg support [autodetect]
+  --disable-ogg		   disable Ogg support [autodetect]
 
   --with-vorbis-prefix=DIR prefix where libvorbis is installed (optional)
-  --disable-vorbis         disable Vorbis support [autodetect]
+  --disable-vorbis	   disable Vorbis support [autodetect]
 
   --with-tremor-prefix=DIR prefix where tremor is installed (optional)
-  --disable-tremor         disable tremor support [autodetect]
+  --disable-tremor	   disable tremor support [autodetect]
 
   --with-mad-prefix=DIR    prefix where libmad is installed (optional)
-  --disable-mad            disable libmad (MP3) support [autodetect]
+  --disable-mad		   disable libmad (MP3) support [autodetect]
 
   --with-fribidi-prefix=DIR    prefix where libfribidi is installed
-  --disable-fribidi            disable libfribidi support [autodetect]
+  --disable-fribidi	       disable libfribidi support [autodetect]
 
   --with-flac-prefix=DIR   prefix where libFLAC is installed (optional)
-  --disable-flac           disable FLAC support [autodetect]
+  --disable-flac	   disable FLAC support [autodetect]
 
   --with-zlib-prefix=DIR   prefix where zlib is installed (optional)
-  --disable-zlib           disable zlib (compression) support [autodetect]
+  --disable-zlib	   disable zlib (compression) support [autodetect]
 
   --with-mpeg2-prefix=DIR  prefix where libmpeg2 is installed (optional)
-  --enable-mpeg2           enable mpeg2 codec for cutscenes [autodetect]
+  --enable-mpeg2	   enable mpeg2 codec for cutscenes [autodetect]
 
   --with-a52-prefix=DIR    Prefix where liba52 is installed (optional)
-  --enable-a52             enable a52 codec for MPEG decoder [autodetect]
+  --enable-a52		   enable a52 codec for MPEG decoder [autodetect]
 
-  --with-opengl-prefix=DIR      prefix where OpenGL (ES) is installed (optional)
-  --disable-opengl-game         disable OpenGL (ES) support in game [autodetect]
+  --with-opengl-prefix=DIR	prefix where OpenGL (ES) is installed (optional)
+  --disable-opengl-game		disable OpenGL (ES) support in game [autodetect]
   --disable-opengl-game-shaders disable use of modern OpenGL with shaders
-  --force-opengl-game-es2       only detect OpenGL ES2
+  --force-opengl-game-es2	only detect OpenGL ES2
 
   --with-glew-prefix=DIR   prefix where GLEW is installed (optional)
-  --disable-glew           disable GLEW support [autodetect]
+  --disable-glew	   disable GLEW support [autodetect]
 
   --with-jpeg-prefix=DIR   Prefix where libjpeg is installed (optional)
-  --disable-jpeg           disable JPEG decoder [autodetect]
+  --disable-jpeg	   disable JPEG decoder [autodetect]
 
   --with-png-prefix=DIR    prefix where libpng is installed (optional)
-  --disable-png            disable PNG decoder [autodetect]
+  --disable-png		   disable PNG decoder [autodetect]
 
   --with-gif-prefix=DIR    prefix where giflib is installed (optional)
-  --disable-gif            disable GIF decoder [autodetect]
+  --disable-gif		   disable GIF decoder [autodetect]
 
   --with-theoradec-prefix=DIR  prefix where libtheoradec is installed (optional)
-  --disable-theoradec      disable Theora decoder [autodetect]
+  --disable-theoradec	   disable Theora decoder [autodetect]
 
   --with-faad-prefix=DIR   prefix where libfaad is installed (optional)
-  --disable-faad           disable AAC decoder [autodetect]
+  --disable-faad	   disable AAC decoder [autodetect]
 
   --with-fluidsynth-prefix=DIR prefix where libfluidsynth is
-                           installed (optional)
-  --disable-fluidsynth     disable fluidsynth MIDI driver [autodetect]
+			   installed (optional)
+  --disable-fluidsynth	   disable fluidsynth MIDI driver [autodetect]
 
   --with-fluidlite-prefix=DIR prefix where libfluidlite is
-                           installed (optional)
-  --disable-fluidlite      disable fluidlite MIDI driver [autodetect]
+			   installed (optional)
+  --disable-fluidlite	   disable fluidlite MIDI driver [autodetect]
 
   --with-ieee1284-prefix=DIR prefix where libieee1284 is installed (optional)
-  --enable-opl2lpt         enable OPL2LPT support
+  --enable-opl2lpt	   enable OPL2LPT support
 
   --with-sparkle-prefix=DIR    prefix where sparkle is installed
-                           (OS X/Windows only - optional)
-  --disable-sparkle        disable sparkle automatic update support
-                           [OS X/Windows only - autodetect]
+			   (OS X/Windows only - optional)
+  --disable-sparkle	   disable sparkle automatic update support
+			   [OS X/Windows only - autodetect]
 
   --disable-osx-dock-plugin    disable the NSDockTilePlugin support
-                               [Mac OS X only - autodetect]
+			       [Mac OS X only - autodetect]
 
   --with-sdl-prefix=DIR    prefix where the SDL package is installed (optional)
-                           e.g., if sdl-config script is at:
-                           /opt/mxe/usr/i686-w64-mingw32.static/bin/sdl2-config
-                           then you should pass:
-                           '--with-sdl-prefix=/opt/mxe/usr/i686-w64-mingw32.static'
+			   e.g., if sdl-config script is at:
+			   /opt/mxe/usr/i686-w64-mingw32.static/bin/sdl2-config
+			   then you should pass:
+			   '--with-sdl-prefix=/opt/mxe/usr/i686-w64-mingw32.static'
 
   --with-freetype2-prefix=DIR  prefix where the freetype-config script is
-                               installed (optional)
-  --disable-freetype2      disable freetype2 TTF library usage [autodetect]
+			       installed (optional)
+  --disable-freetype2	   disable freetype2 TTF library usage [autodetect]
 
   --with-nasm-prefix=DIR   prefix where nasm executable is installed (optional)
-  --disable-nasm           disable assembly language optimizations [autodetect]
+  --disable-nasm	   disable assembly language optimizations [autodetect]
 
   --with-readline-prefix=DIR   prefix where readline is installed (optional)
-  --disable-readline       disable readline support in text console [autodetect]
+  --disable-readline	   disable readline support in text console [autodetect]
 
   --with-libunity-prefix=DIR   prefix where libunity is installed (optional)
-  --disable-libunity       disable Unity launcher integration [autodetect]
+  --disable-libunity	   disable Unity launcher integration [autodetect]
 
   --with-gtk-prefix=DIR   prefix where gtk is installed (optional)
   --disable-gtk       disable GTK dialog integration [autodetect]
 
   --with-sndio-prefix=DIR  prefix where sndio is installed (optional)
-  --disable-sndio          disable sndio MIDI driver [autodetect]
+  --disable-sndio	   disable sndio MIDI driver [autodetect]
 
   --with-sdlnet-prefix=DIR prefix where SDL_Net is installed (optional)
-  --disable-sdlnet         disable SDL_Net networking library [autodetect]
+  --disable-sdlnet	   disable SDL_Net networking library [autodetect]
 
   --with-libcurl-prefix=DIR    prefix where libcurl is installed (optional)
-  --disable-libcurl        disable libcurl networking library [autodetect]
+  --disable-libcurl	   disable libcurl networking library [autodetect]
 
   --with-discord-prefix=DIR   prefix where discord-rpc is installed (optional)
-  --disable-discord       disable Discord rich presence integration [autodetect]
+  --disable-discord	  disable Discord rich presence integration [autodetect]
 
 Some influential environment variables:
-  AR                 archiver command
-  AS                 assembler command
-  ASFLAGS            assembler flags
+  AR		     archiver command
+  AS		     assembler command
+  ASFLAGS	     assembler flags
   CONFIGURE_NO_HOST  Ignore the cross-compile target set by the --host= option
-  CPPFLAGS           C++ preprocessor flags, e.g. -I<include dir> if you have
-                     headers in a nonstandard directory <include dir>
-  CXX                C++ compiler command
-  CXXFLAGS           C++ compiler flags
-  DWP                DWARF packing utility command
-  LD                 linker command
-  LDFLAGS            linker flags, e.g. -L<lib dir> if you have libraries in a
-                     nonstandard directory <lib dir>
+  CPPFLAGS	     C++ preprocessor flags, e.g. -I<include dir> if you have
+		     headers in a nonstandard directory <include dir>
+  CXX		     C++ compiler command
+  CXXFLAGS	     C++ compiler flags
+  DWP		     DWARF packing utility command
+  LD		     linker command
+  LDFLAGS	     linker flags, e.g. -L<lib dir> if you have libraries in a
+		     nonstandard directory <lib dir>
   PKG_CONFIG_LIBDIR  list of directories where pkg-config '.pc' files are
-                     looked up
-  RANLIB             archive indexer command
-  SDL_CONFIG         SDL configurer script name (not path)
-  STRIP              symbol stripper command
-  WINDRES            Windows resource compiler command
-  WINDRESFLAGS       Windows resource compiler flags
+		     looked up
+  RANLIB	     archive indexer command
+  SDL_CONFIG	     SDL configurer script name (not path)
+  STRIP		     symbol stripper command
+  WINDRES	     Windows resource compiler command
+  WINDRESFLAGS	     Windows resource compiler flags
 
 EOF
 		exit 0
@@ -1066,138 +1067,138 @@ EOF
 for ac_option in $@; do
 	case "$ac_option" in
 	# Silently ignore options valid for Autotools configure.
-	--build=*)                                           ;;
-	--program-prefix=*)                                  ;;
-	--sbindir=*)                                         ;;
-	--sysconfdir=*)                                      ;;
-	--includedir=*)                                      ;;
-	--libexecdir=*)                                      ;;
-	--localstatedir=*)                                   ;;
-	--sharedstatedir=*)                                  ;;
-	--infodir=*)                                         ;;
-	--disable-dependency-tracking)                       ;;
-	--enable-dependency-tracking)                        ;;
+	--build=*)					     ;;
+	--program-prefix=*)				     ;;
+	--sbindir=*)					     ;;
+	--sysconfdir=*)					     ;;
+	--includedir=*)					     ;;
+	--libexecdir=*)					     ;;
+	--localstatedir=*)				     ;;
+	--sharedstatedir=*)				     ;;
+	--infodir=*)					     ;;
+	--disable-dependency-tracking)			     ;;
+	--enable-dependency-tracking)			     ;;
 	# End of ignored options.
-	--enable-static)              _static_build=yes      ;;
+	--enable-static)	      _static_build=yes      ;;
 	--enable-detection-static)    _detection_features_static=yes;;
 	--enable-detection-dynamic)   _detection_features_static=no;;
 	--enable-detection-full)      _detection_features_full=yes;;
 	--disable-detection-full)     _detection_features_full=no;;
-	--disable-16bit)              _16bit=no              ;;
-	--enable-highres)             _highres=yes           ;;
-	--disable-highres)            _highres=no            ;;
+	--disable-16bit)	      _16bit=no		     ;;
+	--enable-highres)	      _highres=yes	     ;;
+	--disable-highres)	      _highres=no	     ;;
 	--disable-savegame-timestamp) _savegame_timestamp=no ;;
-	--disable-scalers)            _build_scalers=no      ;;
-	--disable-hq-scalers)         _build_hq_scalers=no   ;;
+	--disable-scalers)	      _build_scalers=no      ;;
+	--disable-hq-scalers)	      _build_hq_scalers=no   ;;
 	--disable-edge-scalers)       _build_edge_scalers=no ;;
-	--disable-aspect)             _build_aspect=no       ;;
-	--enable-alsa)                _alsa=yes              ;;
-	--disable-alsa)               _alsa=no               ;;
-	--enable-seq-midi)            _seq_midi=yes          ;;
-	--disable-seq-midi)           _seq_midi=no           ;;
-	--enable-sndio)               _sndio=yes             ;;
-	--disable-sndio)              _sndio=no              ;;
-	--enable-timidity)            _timidity=yes          ;;
-	--disable-timidity)           _timidity=no           ;;
-	--enable-ogg)                 _ogg=yes               ;;
-	--disable-ogg)                _ogg=no                ;;
-	--enable-vorbis)              _vorbis=yes            ;;
-	--disable-vorbis)             _vorbis=no             ;;
-	--enable-tremor)              _tremor=yes            ;;
-	--disable-tremor)             _tremor=no             ;;
-	--enable-opl2lpt)             _opl2lpt=yes           ;;
-	--disable-opl2lpt)            _opl2lpt=no            ;;
-	--enable-flac)                _flac=yes              ;;
-	--disable-flac)               _flac=no               ;;
-	--enable-mad)                 _mad=yes               ;;
-	--disable-mad)                _mad=no                ;;
-	--enable-fribidi)             _fribidi=yes           ;;
-	--disable-fribidi)            _fribidi=no            ;;
-	--enable-test-c++11)          _test_cxx11=yes        ;;
-	--disable-test-c++11)         _test_cxx11=no         ;;
-	--enable-zlib)                _zlib=yes              ;;
-	--disable-zlib)               _zlib=no               ;;
-	--enable-sparkle)             _sparkle=yes           ;;
-	--disable-sparkle)            _sparkle=no            ;;
+	--disable-aspect)	      _build_aspect=no	     ;;
+	--enable-alsa)		      _alsa=yes		     ;;
+	--disable-alsa)		      _alsa=no		     ;;
+	--enable-seq-midi)	      _seq_midi=yes	     ;;
+	--disable-seq-midi)	      _seq_midi=no	     ;;
+	--enable-sndio)		      _sndio=yes	     ;;
+	--disable-sndio)	      _sndio=no		     ;;
+	--enable-timidity)	      _timidity=yes	     ;;
+	--disable-timidity)	      _timidity=no	     ;;
+	--enable-ogg)		      _ogg=yes		     ;;
+	--disable-ogg)		      _ogg=no		     ;;
+	--enable-vorbis)	      _vorbis=yes	     ;;
+	--disable-vorbis)	      _vorbis=no	     ;;
+	--enable-tremor)	      _tremor=yes	     ;;
+	--disable-tremor)	      _tremor=no	     ;;
+	--enable-opl2lpt)	      _opl2lpt=yes	     ;;
+	--disable-opl2lpt)	      _opl2lpt=no	     ;;
+	--enable-flac)		      _flac=yes		     ;;
+	--disable-flac)		      _flac=no		     ;;
+	--enable-mad)		      _mad=yes		     ;;
+	--disable-mad)		      _mad=no		     ;;
+	--enable-fribidi)	      _fribidi=yes	     ;;
+	--disable-fribidi)	      _fribidi=no	     ;;
+	--enable-test-c++11)	      _test_cxx11=yes	     ;;
+	--disable-test-c++11)	      _test_cxx11=no	     ;;
+	--enable-zlib)		      _zlib=yes		     ;;
+	--disable-zlib)		      _zlib=no		     ;;
+	--enable-sparkle)	      _sparkle=yes	     ;;
+	--disable-sparkle)	      _sparkle=no	     ;;
 	--enable-osx-dock-plugin)     _osxdockplugin=yes     ;;
 	--disable-osx-dock-plugin)    _osxdockplugin=no      ;;
-	--enable-nasm)                _nasm=yes              ;;
-	--disable-nasm)               _nasm=no               ;;
-	--enable-mpeg2)               _mpeg2=yes             ;;
-	--disable-mpeg2)              _mpeg2=no              ;;
-	--enable-a52)                 _a52=yes               ;;
-	--disable-a52)                _a52=no                ;;
-	--disable-jpeg)               _jpeg=no               ;;
-	--enable-jpeg)                _jpeg=yes              ;;
-	--disable-png)                _png=no                ;;
-	--enable-png)                 _png=yes               ;;
-	--disable-gif)                _gif=no                ;;
-	--enable-gif)                 _gif=yes               ;;
-	--disable-theoradec)          _theoradec=no          ;;
-	--enable-theoradec)           _theoradec=yes         ;;
-	--disable-faad)               _faad=no               ;;
-	--enable-faad)                _faad=yes              ;;
-	--disable-fluidsynth)         _fluidsynth=no         ;;
-	--enable-fluidsynth)          _fluidsynth=yes        ;;
-	--disable-fluidlite)          _fluidlite=no          ;;
-	--enable-fluidlite)           _fluidlite=yes         ;;
-	--enable-readline)            _readline=yes          ;;
-	--disable-readline)           _readline=no           ;;
-	--enable-freetype2)           _freetype2=yes         ;;
-	--disable-freetype2)          _freetype2=no          ;;
-	--enable-taskbar)             _taskbar=yes           ;;
-	--disable-taskbar)            _taskbar=no            ;;
-	--enable-system-dialogs)      _dialogs=yes           ;;
-	--disable-system-dialogs)     _dialogs=no            ;;
-	--enable-sdlnet)              _sdlnet=yes            ;;
-	--disable-sdlnet)             _sdlnet=no             ;;
-	--enable-libcurl)             _libcurl=yes           ;;
-	--disable-libcurl)            _libcurl=no            ;;
-	--enable-cloud)               _cloud=yes             ;;
-	--disable-cloud)              _cloud=no              ;;
-	--enable-lld)                 _lld=yes               ;;
-	--disable-lld)                _lld=no                ;;
-	--enable-gold)                _gold=yes              ;;
-	--disable-gold)               _gold=no               ;;
-	--enable-updates)             _updates=yes           ;;
-	--disable-updates)            _updates=no            ;;
-	--enable-libunity)            _libunity=yes          ;;
-	--disable-libunity)           _libunity=no           ;;
-	--enable-tts)                 _tts=yes               ;;
-	--disable-tts)                _tts=no                ;;
-	--enable-gtk)                 _gtk=yes               ;;
-	--disable-gtk)                _gtk=no                ;;
-	--enable-glew)                _glew=yes              ;;
-	--disable-glew)               _glew=no               ;;
-	--disable-opengl-game)        _opengl_game=no        ;;
+	--enable-nasm)		      _nasm=yes		     ;;
+	--disable-nasm)		      _nasm=no		     ;;
+	--enable-mpeg2)		      _mpeg2=yes	     ;;
+	--disable-mpeg2)	      _mpeg2=no		     ;;
+	--enable-a52)		      _a52=yes		     ;;
+	--disable-a52)		      _a52=no		     ;;
+	--disable-jpeg)		      _jpeg=no		     ;;
+	--enable-jpeg)		      _jpeg=yes		     ;;
+	--disable-png)		      _png=no		     ;;
+	--enable-png)		      _png=yes		     ;;
+	--disable-gif)		      _gif=no		     ;;
+	--enable-gif)		      _gif=yes		     ;;
+	--disable-theoradec)	      _theoradec=no	     ;;
+	--enable-theoradec)	      _theoradec=yes	     ;;
+	--disable-faad)		      _faad=no		     ;;
+	--enable-faad)		      _faad=yes		     ;;
+	--disable-fluidsynth)	      _fluidsynth=no	     ;;
+	--enable-fluidsynth)	      _fluidsynth=yes	     ;;
+	--disable-fluidlite)	      _fluidlite=no	     ;;
+	--enable-fluidlite)	      _fluidlite=yes	     ;;
+	--enable-readline)	      _readline=yes	     ;;
+	--disable-readline)	      _readline=no	     ;;
+	--enable-freetype2)	      _freetype2=yes	     ;;
+	--disable-freetype2)	      _freetype2=no	     ;;
+	--enable-taskbar)	      _taskbar=yes	     ;;
+	--disable-taskbar)	      _taskbar=no	     ;;
+	--enable-system-dialogs)      _dialogs=yes	     ;;
+	--disable-system-dialogs)     _dialogs=no	     ;;
+	--enable-sdlnet)	      _sdlnet=yes	     ;;
+	--disable-sdlnet)	      _sdlnet=no	     ;;
+	--enable-libcurl)	      _libcurl=yes	     ;;
+	--disable-libcurl)	      _libcurl=no	     ;;
+	--enable-cloud)		      _cloud=yes	     ;;
+	--disable-cloud)	      _cloud=no		     ;;
+	--enable-lld)		      _lld=yes		     ;;
+	--disable-lld)		      _lld=no		     ;;
+	--enable-gold)		      _gold=yes		     ;;
+	--disable-gold)		      _gold=no		     ;;
+	--enable-updates)	      _updates=yes	     ;;
+	--disable-updates)	      _updates=no	     ;;
+	--enable-libunity)	      _libunity=yes	     ;;
+	--disable-libunity)	      _libunity=no	     ;;
+	--enable-tts)		      _tts=yes		     ;;
+	--disable-tts)		      _tts=no		     ;;
+	--enable-gtk)		      _gtk=yes		     ;;
+	--disable-gtk)		      _gtk=no		     ;;
+	--enable-glew)		      _glew=yes		     ;;
+	--disable-glew)		      _glew=no		     ;;
+	--disable-opengl-game)	      _opengl_game=no	     ;;
 	--disable-opengl-game-shaders) _opengl_game_shaders=no ;;
 	--force-opengl-game-es2)      _opengl_game_es2=yes   ;;
-	--enable-tinygl)              _tinygl=yes            ;;
-	--disable-tinygl)             _tinygl=no             ;;
-	--enable-bink)                _bink=yes              ;;
-	--disable-bink)               _bink=no               ;;
-	--enable-discord)             _discord=yes           ;;
-	--disable-discord)            _discord=no            ;;
+	--enable-tinygl)	      _tinygl=yes	     ;;
+	--disable-tinygl)	      _tinygl=no	     ;;
+	--enable-bink)		      _bink=yes		     ;;
+	--disable-bink)		      _bink=no		     ;;
+	--enable-discord)	      _discord=yes	     ;;
+	--disable-discord)	      _discord=no	     ;;
 	--opengl-mode=*)
 		_opengl_mode=`echo $ac_option | cut -d '=' -f 2`
 		;;
 	--enable-verbose-build)      _verbose_build=yes      ;;
-	--enable-plugins)            _dynamic_modules=yes    ;;
-	--default-dynamic)           _plugins_default=dynamic;;
-	--enable-mt32emu)            _mt32emu=yes            ;;
-	--disable-mt32emu)           _mt32emu=no             ;;
-	--enable-lua)                _lua=yes                ;;
-	--disable-lua)               _lua=no                 ;;
-	--enable-nuked-opl)          _nuked_opl=yes          ;;
-	--disable-nuked-opl)         _nuked_opl=no           ;;
-	--enable-translation)        _translation=yes        ;;
-	--disable-translation)       _translation=no         ;;
-	--enable-vkeybd)             _vkeybd=yes             ;;
-	--disable-vkeybd)            _vkeybd=no              ;;
-	--enable-eventrecorder)      _eventrec=yes           ;;
-	--disable-eventrecorder)     _eventrec=no            ;;
-	--enable-text-console)       _text_console=yes       ;;
-	--disable-text-console)      _text_console=no        ;;
+	--enable-plugins)	     _dynamic_modules=yes    ;;
+	--default-dynamic)	     _plugins_default=dynamic;;
+	--enable-mt32emu)	     _mt32emu=yes	     ;;
+	--disable-mt32emu)	     _mt32emu=no	     ;;
+	--enable-lua)		     _lua=yes		     ;;
+	--disable-lua)		     _lua=no		     ;;
+	--enable-nuked-opl)	     _nuked_opl=yes	     ;;
+	--disable-nuked-opl)	     _nuked_opl=no	     ;;
+	--enable-translation)	     _translation=yes	     ;;
+	--disable-translation)	     _translation=no	     ;;
+	--enable-vkeybd)	     _vkeybd=yes	     ;;
+	--disable-vkeybd)	     _vkeybd=no		     ;;
+	--enable-eventrecorder)      _eventrec=yes	     ;;
+	--disable-eventrecorder)     _eventrec=no	     ;;
+	--enable-text-console)	     _text_console=yes	     ;;
+	--disable-text-console)      _text_console=no	     ;;
 	--with-fluidsynth-prefix=*)
 		arg=`echo $ac_option | cut -d '=' -f 2`
 		FLUIDSYNTH_CFLAGS="-I$arg/include"
@@ -1584,7 +1585,7 @@ caanoo)
 	_host_cpu=arm
 	_host_alias=arm-none-linux-gnueabi
 	;;
-dingux | gcw0)
+dingux | gcw0 | opendingux)
 	_host_os=linux
 	_host_cpu=mipsel
 	_host_alias=mipsel-linux
@@ -1803,12 +1804,12 @@ case $_host_os in
 android)
 	if test -z "$ANDROID_SDK_ROOT"; then
 		echo "Please set ANDROID_SDK_ROOT in your environment: export ANDROID_SDK_ROOT=<path to Android SDK>"
- 		exit 1
+		exit 1
 	fi
 	if test -z "$ANDROID_NDK_ROOT"; then
 		echo "Please set ANDROID_NDK_ROOT in your environment: export ANDROID_NDK_ROOT=<path to Android NDK>"
- 		exit 1
- 	fi
+		exit 1
+	fi
 	;;
 3ds | ds | gamecube | switch | wii)
 	if test -z "$DEVKITPRO"; then
@@ -2251,12 +2252,12 @@ int main(int argc, char *argv[]) {
 }
 EOF
 	cc_check
-        if test "$TMPR" -eq 0; then
-                echo yes
-        else
-                echo no
-                define_in_config_if_yes yes 'NO_CXX11_NULLPTR_T'
-        fi
+	if test "$TMPR" -eq 0; then
+		echo yes
+	else
+		echo no
+		define_in_config_if_yes yes 'NO_CXX11_NULLPTR_T'
+	fi
 fi
 
 #
@@ -2628,7 +2629,7 @@ case $_host_os in
 			_plugins_default=dynamic
 		fi
 		# We have to use 'long' for our 4 byte typedef, because AmigaOS
-		# already typedefs (u)int32 as (unsigned) long  and consequently we'd
+		# already typedefs (u)int32 as (unsigned) long	and consequently we'd
 		# get a compiler error otherwise.
 		type_4_byte='long'
 		# Supress format warnings as the long 4 byte causes noisy warnings.
@@ -3515,6 +3516,17 @@ if test -n "$_host"; then
 			_build_hq_scalers=no
 			_mt32emu=no
 			;;
+		opendingux)
+			_sysroot=`$CXX --print-sysroot`
+			_sdlpath=$_sysroot/usr/bin
+			append_var DEFINES "-DDINGUX -DREDUCE_MEMORY_USAGE"
+			append_var CXXFLAGS "-ffast-math -fdata-sections -ffunction-sections"
+			append_var LDFLAGS "-Wl,--as-needed,--gc-sections"
+			_vkeyb=yes
+			_optimization_level=-O3
+			_backend="opendingux"
+			_port_mk="backends/platform/opendingux/opendingux.mk"
+			;;
 		openpandora)
 			# Use -O3 on the OpenPandora for optimized builds.
 			if test "$_optimizations" = yes; then
@@ -3711,6 +3723,10 @@ case $_backend in
 		append_var DEFINES "-DUSE_NULL_DRIVER"
 		_text_console=yes
 		;;
+	opendingux)
+		_sdlconfig=sdl-config
+		_sdl=auto
+		;;
 	openpandora)
 		append_var DEFINES "-DOPENPANDORA"
 		append_var DEFINES "-DREDUCE_MEMORY_USAGE"
@@ -3836,9 +3852,9 @@ if test "$_sdlnet" = auto ; then
 	# If SDL2 was detected, then test for SDL2_net exclusively
 	# If SDL was detected, then test for SDL_net exclusively
 	# If neither SDL nor SDL2 detected, then test for both (SDL2_net success takes priority)
-	set_var SDL2_NET_LIBS   "$SDL_NET_LIBS"
+	set_var SDL2_NET_LIBS	"$SDL_NET_LIBS"
 	set_var SDL2_NET_CFLAGS "$SDL_NET_CFLAGS"
-	set_var SDL1_NET_LIBS   "$SDL_NET_LIBS"
+	set_var SDL1_NET_LIBS	"$SDL_NET_LIBS"
 	set_var SDL1_NET_CFLAGS "$SDL_NET_CFLAGS"
 
 	if test "$_sdl" = no || test "$_sdlMajorVersionNumber" = 2; then
@@ -3900,7 +3916,7 @@ fi
 # Enable 16bit support only for backends which support it
 #
 case $_backend in
-	3ds | android | android3d | androidsdl | dingux | dc | ds | gph | iphone | ios7 | maemo | null | openpandora | psp | psp2 | samsungtv | sdl | switch | wii)
+	3ds | android | android3d | androidsdl | dingux | dc | ds | gph | iphone | ios7 | maemo | null | opendingux | openpandora | psp | psp2 | samsungtv | sdl | switch | wii)
 		if test "$_16bit" = auto ; then
 			_16bit=yes
 		else
@@ -4059,8 +4075,8 @@ if test "$_dynamic_modules" = yes ; then
 		append_var LIBS ""
 _mak_plugins='
 PLUGIN_EXTRA_DEPS =
-PLUGIN_LDFLAGS  += -s SIDE_MODULE=1 -s EXPORT_ALL=1
-PRE_OBJS_FLAGS  := -s MAIN_MODULE=1 -s EXPORT_ALL=1
+PLUGIN_LDFLAGS	+= -s SIDE_MODULE=1 -s EXPORT_ALL=1
+PRE_OBJS_FLAGS	:= -s MAIN_MODULE=1 -s EXPORT_ALL=1
 POST_OBJS_FLAGS :=
 '
 		;;
@@ -4078,8 +4094,8 @@ PLUGIN_LDFLAGS		+= -Wl,-T$(srcdir)/backends/plugins/3ds/plugin.ld -march=armv6k 
 		append_var LIBS "-use-dynld"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS =
-PLUGIN_LDFLAGS  += -shared
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= -shared
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -4098,8 +4114,8 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 # to the main libscummvm.so.
 _mak_plugins='
 PLUGIN_EXTRA_DEPS = libscummvm.so
-PLUGIN_LDFLAGS  += $(LDFLAGS) -L. -lscummvm
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= $(LDFLAGS) -L. -lscummvm
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -4109,8 +4125,8 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 		append_var LIBS "-ldl"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS = $(EXECUTABLE)
-PLUGIN_LDFLAGS  += -bundle -bundle_loader $(EXECUTABLE) -exported_symbols_list "$(srcdir)/plugin.exp"
-PRE_OBJS_FLAGS  := -all_load
+PLUGIN_LDFLAGS	+= -bundle -bundle_loader $(EXECUTABLE) -exported_symbols_list "$(srcdir)/plugin.exp"
+PRE_OBJS_FLAGS	:= -all_load
 POST_OBJS_FLAGS :=
 '
 		;;
@@ -4140,8 +4156,8 @@ PLUGIN_LDFLAGS		+= -Wl,-T$(srcdir)/backends/plugins/ds/plugin.ld -mthumb -mthumb
 		append_var CXXFLAGS "-fPIC"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS =
-PLUGIN_LDFLAGS  += -shared
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= -shared
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -4160,8 +4176,8 @@ PLUGIN_LDFLAGS		+= -Wl,-T$(srcdir)/backends/plugins/wii/plugin.ld
 		append_var LIBS "-ldl"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS = $(EXECUTABLE)
-PLUGIN_LDFLAGS  += -shared
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= -shared
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -4172,8 +4188,8 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 		append_var LIBS "-ldl"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS =
-PLUGIN_LDFLAGS  += -shared -static-libgcc
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= -shared -static-libgcc
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -4185,8 +4201,8 @@ POST_OBJS_FLAGS := -Wl,-no-whole-archive
 		append_var LIBS "-ldl"
 _mak_plugins='
 PLUGIN_EXTRA_DEPS =
-PLUGIN_LDFLAGS  += -shared
-PRE_OBJS_FLAGS  := -Wl,-export-dynamic -Wl,-whole-archive
+PLUGIN_LDFLAGS	+= -shared
+PRE_OBJS_FLAGS	:= -Wl,-export-dynamic -Wl,-whole-archive
 POST_OBJS_FLAGS := -Wl,-no-whole-archive
 '
 		;;
@@ -5464,7 +5480,7 @@ if test "$_opengl_game" = auto ; then
 	_opengl_game=no
 	if (test "$_backend" = "sdl" && test "$_opengl" = yes) || test "$_backend" = "android3d" || test "$_backend" = "switch" || test "$_backend" = "raspberrypi"; then
 		# Try different header filenames
-		# 1) GL/gl.h         This is usually used on POSIX and Windows systems
+		# 1) GL/gl.h	     This is usually used on POSIX and Windows systems
 		# 2) OpenGL/gl.h     This is used on Mac OS X
 		# 3) GLES2/gl2.h     This is used for OpenGL ES 2.x
 		for i in "GL/gl.h" "OpenGL/gl.h" "GLES2/gl2.h"; do
@@ -5613,7 +5629,7 @@ if test "$_have_x86" = yes ; then
 	if test "$_nasm" = no ; then
 		echo "disabled"
 	else
-		IFS="${IFS= 	}"; ac_save_ifs="$IFS"; IFS=$SEPARATOR
+		IFS="${IFS=	}"; ac_save_ifs="$IFS"; IFS=$SEPARATOR
 
 		for path_dir in $_nasmpath; do
 			if test -x "$path_dir/nasm$NATIVEEXEEXT" ; then
@@ -6216,22 +6232,22 @@ echo "Creating config.mk"
 cat > config.mk.new << EOF
 # -------- Generated by configure -----------
 
-SAVED_CONFIGFLAGS       := $SAVED_CONFIGFLAGS
-SAVED_AR                := $SAVED_AR
-SAVED_AS                := $SAVED_AS
-SAVED_ASFLAGS           := $SAVED_ASFLAGS
-SAVED_CPPFLAGS          := $SAVED_CPPFLAGS
-SAVED_CXX               := $SAVED_CXX
-SAVED_CXXFLAGS          := $SAVED_CXXFLAGS
-SAVED_DWP               := $SAVED_DWP
-SAVED_LD                := $SAVED_LD
-SAVED_LDFLAGS           := $SAVED_LDFLAGS
+SAVED_CONFIGFLAGS	:= $SAVED_CONFIGFLAGS
+SAVED_AR		:= $SAVED_AR
+SAVED_AS		:= $SAVED_AS
+SAVED_ASFLAGS		:= $SAVED_ASFLAGS
+SAVED_CPPFLAGS		:= $SAVED_CPPFLAGS
+SAVED_CXX		:= $SAVED_CXX
+SAVED_CXXFLAGS		:= $SAVED_CXXFLAGS
+SAVED_DWP		:= $SAVED_DWP
+SAVED_LD		:= $SAVED_LD
+SAVED_LDFLAGS		:= $SAVED_LDFLAGS
 SAVED_PKG_CONFIG_LIBDIR := $SAVED_PKG_CONFIG_LIBDIR
-SAVED_RANLIB            := $SAVED_RANLIB
-SAVED_SDL_CONFIG        := $SAVED_SDL_CONFIG
-SAVED_STRIP             := $SAVED_STRIP
-SAVED_WINDRES           := $SAVED_WINDRES
-SAVED_WINDRESFLAGS      := $SAVED_WINDRESFLAGS
+SAVED_RANLIB		:= $SAVED_RANLIB
+SAVED_SDL_CONFIG	:= $SAVED_SDL_CONFIG
+SAVED_STRIP		:= $SAVED_STRIP
+SAVED_WINDRES		:= $SAVED_WINDRES
+SAVED_WINDRESFLAGS	:= $SAVED_WINDRESFLAGS
 
 CXX := $CXX
 CXXFLAGS := $CXXFLAGS

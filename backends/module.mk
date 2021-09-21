@@ -329,6 +329,11 @@ MODULE_OBJS += \
 	mixer/null/null-mixer.o
 endif
 
+ifeq ($(BACKEND),opendingux)
+MODULE_OBJS += \
+	events/opendingux/opendinguxsdl-events.o
+endif
+
 ifeq ($(BACKEND),openpandora)
 MODULE_OBJS += \
 	events/openpandora/op-events.o \
