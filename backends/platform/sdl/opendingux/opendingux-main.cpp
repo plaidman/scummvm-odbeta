@@ -20,7 +20,7 @@
  *
  */
 
-#include "backends/platform/opendingux/opendingux.h"
+#include "backends/platform/sdl/opendingux/opendingux.h"
 #include "backends/plugins/sdl/sdl-provider.h"
 #include "base/main.h"
 

@@ -1,7 +1,6 @@
 OD_EXE_STRIPPED := scummvm_stripped$(EXEEXT)
 HUGEEDIT = hugeedit
 
-bundle_name = dingux-dist/scummvm
 bundle = od-opk
 
 all: $(OD_EXE_STRIPPED)
@@ -34,7 +33,7 @@ endif
 
 	$(CP) $(srcdir)/dists/opendingux/scummvm.png $(bundle)/
 	$(CP) $(srcdir)/dists/opendingux/default.$(target).desktop $(bundle)/
-	$(CP) $(srcdir)/backends/platform/opendingux/README.OPENDINGUX $(bundle)/README.man.txt
+	$(CP) $(srcdir)/backends/platform/sdl/opendingux/README.OPENDINGUX $(bundle)/README.man.txt
 	echo >> $(bundle)/README.man.txt
 	echo '[General README]' >> $(bundle)/README.man.txt
 	echo >> $(bundle)/README.man.txt
@@ -44,9 +43,7 @@ endif
 
 od-make-opk: $(bundle)
 	$(STRIP) $(bundle)/scummvm
-ifneq ($(target),rs90)
-	$(HUGEEDIT) --text --data $(bundle)/scummvm
-endif
+#	$(HUGEEDIT) --text --data $(bundle)/scummvm
 	$(srcdir)/dists/opendingux/make-opk.sh -d $(bundle) -o scummvm_$(target)
 
 GeneralUser_GS_1.44-FluidSynth.zip:

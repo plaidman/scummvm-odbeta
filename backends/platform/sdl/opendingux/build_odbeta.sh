@@ -10,9 +10,9 @@ export PATH=$TOOLCHAIN/usr/bin:$SYSROOT/usr/include:$TOOLCHAIN/bin:$PATH
 export CXX=mipsel-linux-g++
 export CXXFLAGS="-funsigned-char" # workaround for a scummvm tolower() bug when adding games
 
-if [ $target != "rs90" ]; then
-	export LDFLAGS="-Wl,-zcommon-page-size=2097152,-zmax-page-size=2097152 -lhugetlbfs"
-fi
+#if [ $target != "rs90" ]; then
+#	export LDFLAGS="-Wl,-zcommon-page-size=2097152,-zmax-page-size=2097152 -lhugetlbfs"
+#fi
 
 CONFIG+="./configure --host=opendingux --enable-release --disable-detection-full"
 CONFIG+=" --disable-alsa --disable-vorbis --disable-mt32emu --disable-nuked-opl --disable-tts"
@@ -29,7 +29,7 @@ case $target in
 	;;
 
 	rs90)
-	CONFIG+=" --disable-highres --disable-16bit"
+	CONFIG+=" --disable-highres --disable-16bit --disable-scalers"
 	;;
 	
 	*)

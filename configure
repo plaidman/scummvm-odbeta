@@ -3519,13 +3519,14 @@ if test -n "$_host"; then
 		opendingux)
 			_sysroot=`$CXX --print-sysroot`
 			_sdlpath=$_sysroot/usr/bin
-			append_var DEFINES "-DDINGUX -DREDUCE_MEMORY_USAGE"
+			append_var DEFINES "-DDINGUX -DOPENDINGUX -DREDUCE_MEMORY_USAGE"
 			append_var CXXFLAGS "-ffast-math -fdata-sections -ffunction-sections"
 			append_var LDFLAGS "-Wl,--as-needed,--gc-sections"
 			_vkeyb=yes
 			_optimization_level=-O3
 			_backend="opendingux"
-			_port_mk="backends/platform/opendingux/opendingux.mk"
+			_port_mk="backends/platform/sdl/opendingux/opendingux.mk"
+			add_line_to_config_mk 'OPENDINGUX = 1'
 			;;
 		openpandora)
 			# Use -O3 on the OpenPandora for optimized builds.
@@ -3726,6 +3727,7 @@ case $_backend in
 	opendingux)
 		_sdlconfig=sdl-config
 		_sdl=auto
+		append_var MODULES "backends/platform/sdl"
 		;;
 	openpandora)
 		append_var DEFINES "-DOPENPANDORA"

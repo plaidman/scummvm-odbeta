@@ -24,7 +24,7 @@ Running Linux on an x86/amd64 machine:
 
 2. git clone the ScummVM repository
 
-3. Run 'target=x backends/platform/opendingux/build_odbeta.sh' 
+3. Run 'target=x backends/platform/sdl/opendingux/build_odbeta.sh' 
    where x=gcw0|lepus|rs90 
 
 4. Copy the resulting file scummvm_$(target).opk to your device

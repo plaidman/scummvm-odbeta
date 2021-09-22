@@ -20,15 +20,22 @@
  *
  */
 
-#ifndef SDL_DINGUX_COMMON_H
-#define SDL_DINGUX_COMMON_H
+#ifndef PLATFORM_SDL_OPENDINGUX_H
+#define PLATFORM_SDL_OPENDINGUX_H
 
-#include "backends/platform/sdl/posix/posix.h"
+#include "backends/platform/sdl/sdl.h"
 
-class OSystem_SDL_Opendingux : public OSystem_POSIX {
+class OSystem_SDL_Opendingux : public OSystem_SDL {
 public:
-	void initBackend();
-	bool hasFeature(Feature f);
+	virtual void init() override;
+	virtual void initBackend() override;
+	virtual bool hasFeature(Feature f) override;
+	virtual void setFeatureState(Feature f, bool enable) override;
+	virtual bool getFeatureState(Feature f) override;
+
+protected:
+	virtual Common::String getDefaultConfigFileName() override;
+	virtual Common::String getDefaultLogFileName() override;
 };
 
 #endif
