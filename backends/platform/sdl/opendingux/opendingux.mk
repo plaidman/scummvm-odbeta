@@ -32,7 +32,10 @@ endif
 	$(CP) $(EXECUTABLE) $(bundle)/scummvm
 
 	$(CP) $(srcdir)/dists/opendingux/scummvm.png $(bundle)/
-	$(CP) $(srcdir)/dists/opendingux/default.$(target).desktop $(bundle)/
+	$(CP) $(srcdir)/dists/opendingux/startUI.$(target).desktop $(bundle)/
+ifdef dualopk
+	$(CP) $(srcdir)/dists/opendingux/startGame.$(target).desktop $(bundle)/
+endif
 	$(CP) $(srcdir)/backends/platform/sdl/opendingux/README.OPENDINGUX $(bundle)/README.man.txt
 	echo >> $(bundle)/README.man.txt
 	echo '[General README]' >> $(bundle)/README.man.txt

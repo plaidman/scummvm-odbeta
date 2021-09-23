@@ -27,14 +27,14 @@
 #define PAD_DOWN  SDLK_DOWN
 #define PAD_LEFT  SDLK_LEFT
 #define PAD_RIGHT SDLK_RIGHT
-#define BUT_A     SDLK_LSHIFT
+#define BUT_A     SDLK_LCTRL
 #define BUT_B     SDLK_LALT
 #define BUT_X     SDLK_SPACE
-#define BUT_Y     SDLK_LCTRL
-#define BUT_SELECT   SDLK_BACKSPACE
-#define BUT_START    SDLK_TAB
-#define TRIG_L    SDLK_RETURN
-#define TRIG_R    SDLK_ESCAPE
+#define BUT_Y     SDLK_LSHIFT
+#define BUT_SELECT   SDLK_ESCAPE
+#define BUT_START    SDLK_RETURN
+#define SHOULD_L    SDLK_TAB
+#define SHOULD_R    SDLK_BACKSPACE
 
 bool ODSdlEventSource::remapKey(SDL_Event &ev, Common::Event &event) {
 	if (ev.key.keysym.sym == PAD_UP) {
@@ -89,7 +89,7 @@ bool ODSdlEventSource::remapKey(SDL_Event &ev, Common::Event &event) {
 		processMouseEvent(event, _km.x / MULTIPLIER, _km.y / MULTIPLIER);
 
 		return true;
-	} else if (ev.key.keysym.sym == BUT_Y) { // left mouse button
+	} else if (ev.key.keysym.sym == BUT_A) { // left mouse button
 		if (ev.type == SDL_KEYDOWN) {
 			event.type = Common::EVENT_LBUTTONDOWN;
 		} else {
@@ -113,7 +113,7 @@ bool ODSdlEventSource::remapKey(SDL_Event &ev, Common::Event &event) {
 		ev.key.keysym.sym = SDLK_PERIOD;
 		ev.key.keysym.mod = KMOD_NONE;
 		ev.key.keysym.unicode = '.';
-	} else if (ev.key.keysym.sym == TRIG_L) { // global menu
+	} else if (ev.key.keysym.sym == BUT_START) { // global menu
 		ev.key.keysym.sym = SDLK_F5;
 		event.kbd.keycode = Common::KEYCODE_F5;
 		event.kbd.ascii = Common::ASCII_F5;
@@ -126,7 +126,7 @@ bool ODSdlEventSource::remapKey(SDL_Event &ev, Common::Event &event) {
 		}
 
 		return true;
-	} else if (ev.key.keysym.sym == BUT_A) { // key '0'
+	} else if (ev.key.keysym.sym == BUT_Y) { // key '0'
 		ev.key.keysym.sym = SDLK_0;
 
 		event.kbd.keycode = Common::KEYCODE_0;
@@ -140,17 +140,17 @@ bool ODSdlEventSource::remapKey(SDL_Event &ev, Common::Event &event) {
 		}
 
 		return true;
-	} else if (ev.key.keysym.sym == BUT_SELECT) { // virtual keyboard
+	} else if (ev.key.keysym.sym == SHOULD_R) { // virtual keyboard
 #ifdef ENABLE_VKEYBD
 		if (ev.type == SDL_KEYDOWN)
 			event.type = Common::EVENT_VIRTUAL_KEYBOARD;
 
 		return true;
 #endif
-	} else if (ev.key.keysym.sym == BUT_START) { // F5, menu in some games
+	} else if (ev.key.keysym.sym == SHOULD_L) { // F5, menu in some games
 		ev.key.keysym.sym = SDLK_F5;
 
-	}  else if (ev.key.keysym.sym == TRIG_R) { // ESC
+	}  else if (ev.key.keysym.sym == BUT_SELECT) { // ESC
 		ev.key.keysym.sym = SDLK_ESCAPE;
 	} else {
 		event.kbd.keycode = (Common::KeyCode)ev.key.keysym.sym;

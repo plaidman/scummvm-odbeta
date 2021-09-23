@@ -1,16 +1,19 @@
-[ScummVM-Opendingux README]
+Build instructions
+==================
+Running Linux on an x86/amd64 machine:
 
-Controls
-========
-- Dpad/analog joy: move mouse cursor
-- A: left mouse button click
-- B: right mouse button click
-- X: '0' key
-- Y: '.' key (skips dialogue line in some engines)
-- Select: ESC button, scene skip in some engines
-- Start: open global menu
-- Left Shoulder: F5 key, game menu in some engines
-- Right Shoulder: opens virtual keyboard
+1. Download and install the desired toolchain (http://od.abstraction.se/opendingux/toolchain/) in /opt/
+
+2. git clone the ScummVM repository
+
+3. Run 'target=x backends/platform/sdl/opendingux/build_odbeta.sh' 
+   where x=gcw0|lepus|rs90 
+
+   Or if you want a dual opk with one launcher capable of starting games directly 
+   for e.g. simplemenu integration :
+   'target=x dualopk=yes backends/platform/sdl/opendingux/build_odbeta.s' 
+
+4. Copy the resulting file scummvm_$(target).opk to your device
 
 Game Auto-Detection (dualopk only)
 ==================================
