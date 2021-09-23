@@ -55,6 +55,7 @@ void OSystem_SDL_Opendingux::initBackend() {
 	ConfMan.registerDefault("themepath", "./themes");
 	ConfMan.registerDefault("extrapath", "./engine-data");
 	ConfMan.registerDefault("gui_theme", "builtin");
+	ConfMan.registerDefault("scale_factor", "1");
 
 	ConfMan.setBool("fullscreen", true);
 	ConfMan.setInt("joystick_num", 0);
@@ -74,6 +75,9 @@ void OSystem_SDL_Opendingux::initBackend() {
 	if (!ConfMan.hasKey("gui_theme")) {
 		ConfMan.set("gui_theme", "builtin");
 	}
+	if (!ConfMan.hasKey("scale_factor")) {
+                ConfMan.set("scale_factor", "1");
+        }
 
 	// Create the savefile manager
 	if (_savefileManager == 0) {

@@ -3522,7 +3522,7 @@ if test -n "$_host"; then
 			append_var DEFINES "-DDINGUX -DOPENDINGUX -DREDUCE_MEMORY_USAGE"
 			append_var CXXFLAGS "-ffast-math -fdata-sections -ffunction-sections"
 			append_var LDFLAGS "-Wl,--as-needed,--gc-sections"
-			_vkeyb=yes
+			_vkeybd=yes
 			_optimization_level=-O3
 			_backend="opendingux"
 			_port_mk="backends/platform/sdl/opendingux/opendingux.mk"
