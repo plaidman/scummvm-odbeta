@@ -17,17 +17,17 @@ Running Linux on an x86/amd64 machine:
 
 Game Auto-Detection (dualopk only)
 ==================================
-1) add a blank text file 'detect.svm' alongside your individual game folders, e.g.
-    - roms/
-      - scummvm/
-        - detect.svm
-        - Sam & Max/
-          - (sam & max files)
-        - Blade Runner/
-          - (blade runner files
+1) add a blank text file 'detect.svm' alongside your individual game folders, for example:
+     ---------------
+    | - roms/scummvm/
+    |    - detect.svm
+    |    - Game Folder/
+    |        - game files
+     ------------------
 2) load ScummVM, navigate to and select 'detect.svm'
-   - your screen will turn black for a moment while the autodetect runs
-   - .svm files will be generated for each of your games
+    - the loading screen will show while the script runs
+    - this may take longer if you have many games
+    - .svm files will be generated for each of your games
 3) load one of the .svm files to start your game directly
 
 Troubleshooting
